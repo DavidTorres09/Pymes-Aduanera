@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(255, 255, 255);
+  color: #000000; /* Color de texto más oscuro para mejorar la legibilidad */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 15px;
+  background: linear-gradient(131deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 24%, rgba(4,196,197,1) 57%, rgba(0,212,255,1) 82%, rgba(255,255,255,1) 100%);
+  box-shadow: 0 10px 20px rgba(57, 55, 55, 0.7); /* Sombra suave */
+  background-color: #ffffff; /* Blanco */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TitleLogin{
+  color: white;
+}
+
+.logo {
+  max-width: 30%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.remember-checkbox {
+  margin-right: 10px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ced4da; /* Un gris claro */
+  border-radius: 8px;
+  color: #495057;
+  background-color: #ffffff; /* Blanco */
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  border-color: #007bff; /* Azul brillante para resaltar el enfoque */
+}
+
+button {
+  background-color: rgb(18, 142, 243); /* Azul brillante */
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(10, 106, 184); /* Azul más oscuro al pasar el ratón */
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .login-container {
+    padding: 30px;
+  }
+}
