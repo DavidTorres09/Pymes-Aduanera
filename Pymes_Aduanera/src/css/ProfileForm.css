@@ -1,0 +1,73 @@
+.perfil-container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .perfil-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .datos-usuario {
+    margin-bottom: 20px;
+  }
+  
+  .datos-usuario p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 600px) {
+    .perfil-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .perfil-container h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .datos-usuario p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  
+    input,
+    button {
+      font-size: 14px;
+    }
+  }
+  
