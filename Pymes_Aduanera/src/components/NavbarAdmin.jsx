@@ -17,7 +17,7 @@ const NavbarAdmin = () => {
             <li className="nav-item"><Link to="/admin/revision" className='Link'>Revision</Link></li>
             <li className="nav-item"><Link to="/admin/tracking" className='Link'>Tracking</Link></li>
             <li className="nav-item"><Link to="/admin/perfil" className='Link'>Perfil</Link></li>
-            <li className="nav-item"><Link to="/salir" className='Link'>Salir</Link></li>
+            <li className="nav-item"><Link to="/" className='Link'>Salir</Link></li>
           </ul>
         </nav>
       </div>

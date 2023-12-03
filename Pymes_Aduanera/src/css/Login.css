@@ -56,7 +56,7 @@ label {
 }
 
 input,
-button {
+button .Login {
   width: 100%;
   padding: 15px;
   margin: 10px 0;
@@ -68,7 +68,7 @@ button {
 }
 
 input:focus,
-button:focus {
+button .Login:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);

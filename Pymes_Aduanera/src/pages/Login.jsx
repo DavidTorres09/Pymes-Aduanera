@@ -40,7 +40,7 @@ function Login() {
         </div>
 
         <div className="form-group">
-          <button type="submit">Iniciar sesión</button>
+          <button type="submit" className='Login'>Iniciar sesión</button>
         </div>
       </form>
     </div>

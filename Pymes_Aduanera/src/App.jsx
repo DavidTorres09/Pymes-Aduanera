@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import IndexAdmin from './pages/admin/indexAdmin';
 import Tickets from './pages/admin/Tickets';
 import Clients from './pages/admin/Clients';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/admin" element={<IndexAdmin />} />
         <Route path="/admin/clientes" element={<Clients />} />
         <Route path="/admin/tickets" element={<Tickets />} />
+        <Route path="/admin/perfil" element={<Profile />} />
       </Routes>
     </Router>
   );
