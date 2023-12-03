@@ -6,8 +6,11 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: rgb(255, 255, 255);
-  color: #000000; /* Color de texto más oscuro para mejorar la legibilidad */
+  background-image: url("https://i.pinimg.com/originals/6d/d9/17/6dd917d6ea569253404a898dc37f2c19.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff; /* Color de texto más oscuro para mejorar la legibilidad */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,15 +22,17 @@ body {
   max-width: 500px;
   padding: 40px;
   border-radius: 15px;
-  background: linear-gradient(131deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 24%, rgba(4,196,197,1) 57%, rgba(0,212,255,1) 82%, rgba(255,255,255,1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(145deg, #003366 0%, #66ccff 50%, #003366 100%);
   box-shadow: 0 10px 20px rgba(57, 55, 55, 0.7); /* Sombra suave */
   background-color: #ffffff; /* Blanco */
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Nueva sombra */
 }
 
-.TitleLogin{
+.TitleLogin {
   color: white;
 }
 
@@ -66,13 +71,14 @@ button {
   border-radius: 8px;
   color: #495057;
   background-color: #ffffff; /* Blanco */
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Añadida la transición de sombra */
 }
 
 input:focus,
 button:focus {
   outline: none;
   border-color: #007bff; /* Azul brillante para resaltar el enfoque */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Nueva sombra al enfocar */
 }
 
 button {
@@ -82,11 +88,12 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease, border-radius 0.3s ease;
+  transition: background-color 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease; /* Añadida la transición de sombra */
 }
 
 button:hover {
   background-color: rgb(10, 106, 184); /* Azul más oscuro al pasar el ratón */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.7); /* Nueva sombra al pasar el ratón */
 }
 
 /* Responsive */
