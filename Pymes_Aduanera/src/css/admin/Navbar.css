@@ -1,8 +1,7 @@
-/* Estilos del navbar */
 .navbar-container {
-  background: linear-gradient(131deg, rgba(0,86,111,1) 0%, rgba(0,86,111,1) 100%);
+  background: linear-gradient(131deg, rgb(0, 42, 54) 0%, rgb(0, 129, 168) 100%);
   padding: 15px 20px;
-  text-align: center; /* Centrar todo el contenido horizontalmente */
+  text-align: center; 
 }
 
 .navbar {
@@ -14,7 +13,7 @@
 .logo {
   width: 60px;
   height: 50px;
-  margin-right: 10px; /* Ajustar según sea necesario */
+  margin-right: 10px; 
 }
 
 .navbar-brand {
@@ -38,12 +37,17 @@
   transition: color 0.3s;
 }
 
-.nav-item:hover {
-  color: #00c6ff;
+.Link:hover {
+  color: rgb(73, 206, 243);
   text-shadow: 10px 0 10px rgba(255, 255, 255, 0.4);
 }
 
-/* Estilos para la frase debajo del navbar */
+.Link {
+  text-decoration: none;
+  color: white;
+}
+
+
 .phrase {
   text-align: center;
   padding: 5px;

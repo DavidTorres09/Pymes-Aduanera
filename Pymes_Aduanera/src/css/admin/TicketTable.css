@@ -1,0 +1,45 @@
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .ticket-table th, .ticket-table td {
+    border: 1px solid #ddd;
+    padding: 12px; 
+    text-align: left;
+  }
+  
+  .ticket-table th {
+    background-color: #007EA7;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .ticket-table tr:nth-child(even) {
+    background-color: #f9f9f9; 
+  }
+  
+  .ticket-table th, .ticket-table td {
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  .ticket-table th:hover, .ticket-table td:hover {
+    background-color: #007EA7;
+    color: white;
+  }
+  
+  .estado-button {
+    background-color: #007EA7;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px; 
+  }
+  
+  .estado-button:hover {
+    background-color: #005572; 
+  }
+  
