@@ -169,7 +169,7 @@ const UserCards = () => {
         className="modal"
         overlayClassName="overlay"
       >
-        <h2>Agregar Nuevo Cliente</h2>
+        <h2>Cliente</h2>
         <form>
           <label>
             Nombre:
