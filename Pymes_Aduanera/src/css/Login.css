@@ -1,10 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
+
+.containerLogin {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url("https://i.pinimg.com/originals/6d/d9/17/6dd917d6ea569253404a898dc37f2c19.jpg");
   background-position: center;

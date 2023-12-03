@@ -11,7 +11,7 @@ function Login() {
     e.preventDefault();
 
     if (username === 'admin' && password === 'test123') {
-      navigate('/profile');
+      navigate('/admin');
     } else if (username === 'user' && password === 'test123') {
       navigate('/pagina2');
     } else {
@@ -20,7 +20,8 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
+    <div className='containerLogin'>
+      <div className="login-container">
       <div className="company-name">
         <h1 className='TitleLogin'>Pymes Aduanera</h1>
       </div>
@@ -43,6 +44,8 @@ function Login() {
         </div>
       </form>
     </div>
+    </div>
+    
   );
 }
 

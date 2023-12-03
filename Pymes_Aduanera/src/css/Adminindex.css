@@ -1,0 +1,8 @@
+.phrase {
+    color: white; /* Establece el color del texto en blanco */
+    font-size: 18px; /* Puedes ajustar el tamaño de la fuente según tus preferencias */
+    font-weight: bold; /* Opcional: establece el peso de la fuente como negrita */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Agrega una sombra al texto para resaltarlo */
+    margin: 10px; /
+}
+  
