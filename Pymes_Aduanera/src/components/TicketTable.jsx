@@ -23,7 +23,7 @@ const TicketTable = () => {
       nombre: 'Maria',
       apellido1: 'Lopez',
       apellido2: 'Rodriguez',
-      estado: 'enProceso',
+      estado: 'En Proceso',
       prioridad: 'Media',
       usuario: 'usuario2',
       fechaInicio: '2023-01-02',
