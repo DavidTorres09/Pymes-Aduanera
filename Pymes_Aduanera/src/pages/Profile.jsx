@@ -6,7 +6,9 @@ const Profile= () => {
   return (
     <>
         <NavbarAdmin></NavbarAdmin>
-        <ProfileForm></ProfileForm>
+        <div style={{ marginBottom: '10%' }}>
+          <ProfileForm></ProfileForm>
+        </div>
         <Footer></Footer>
     </>
   );

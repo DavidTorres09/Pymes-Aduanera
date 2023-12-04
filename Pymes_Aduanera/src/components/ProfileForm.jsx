@@ -26,18 +26,11 @@ const ProfileForm = () => {
   // };
 
   const guardarPerfil = () => {
-    // Validar que ningún campo esté vacío
     if (!profile.nombreUsuario || !profile.Apellido1 || !profile.Apellido2 || !profile.idUsuario || !profile.Numero || !profile.Correo) {
       alert('Completa todos los campos antes de guardar.');
       return;
     }
-
-    // Enviar los datos al backend o realizar la lógica necesaria aquí
-
-    // Mostrar un mensaje de éxito
     alert('Perfil guardado correctamente.');
-
-    // Desactivar el modo de edición después de guardar
     setEditMode(false);
   };
 
@@ -131,6 +124,7 @@ const ProfileForm = () => {
           </form>
         ) : (
           <div className="displayProfile">
+            <img src=""  className="profile__img"/>
             <p>
               <strong>Nombre:</strong> {profile.nombreUsuario}
             </p>

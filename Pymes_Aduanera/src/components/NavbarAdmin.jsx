@@ -12,10 +12,10 @@ const NavbarAdmin = () => {
             <li className="nav-item"><Link to="/admin/clientes" className='Link'>Clientes</Link></li>
             <li className="nav-item"><Link to="/admin/tickets" className='Link'>Tickets</Link></li>
             <li className="nav-item"><Link to="/admin/paqueteria" className='Link'>Paqueteria</Link></li>
+            <li className="nav-item"><Link to="/admin/tracking" className='Link'>Tracking</Link></li>
             <li className="nav-item"><Link to="/admin/cotizaciones" className='Link'>Cotizaciones</Link></li>
             <li className="nav-item"><Link to="/admin/imp_exp" className='Link'>Imp/Exp</Link></li>
             <li className="nav-item"><Link to="/admin/revision" className='Link'>Revision</Link></li>
-            <li className="nav-item"><Link to="/admin/tracking" className='Link'>Tracking</Link></li>
             <li className="nav-item"><Link to="/admin/perfil" className='Link'>Perfil</Link></li>
             <li className="nav-item"><Link to="/" className='Link'>Salir</Link></li>
           </ul>

@@ -8,7 +8,9 @@ const Tickets = () => {
         <>
          <NavbarAdmin></NavbarAdmin>
         <h1 className="TicketsTitle">Tickets</h1>
-        <TicketTable></TicketTable>
+        <div style={{ marginBottom: '10%' }}>
+            <TicketTable></TicketTable>
+        </div>
         <Footer></Footer>
         </>
     );
