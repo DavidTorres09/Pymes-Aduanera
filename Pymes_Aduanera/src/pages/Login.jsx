@@ -13,7 +13,7 @@ function Login() {
     if (username === 'admin' && password === 'test123') {
       navigate('/admin');
     } else if (username === 'user' && password === 'test123') {
-      navigate('/pagina2');
+      navigate('/user');
     } else {
       navigate('/error'); 
     }

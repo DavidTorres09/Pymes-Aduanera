@@ -9,8 +9,8 @@ const NavbarUser = () => {
           <img src="https://cdn-icons-png.flaticon.com/512/1996/1996005.png" alt="Logo de la empresa" className="logo" />
           <div className="navbar-brand">Pymes Aduanera</div>
           <ul className="navbar-nav">
-            <li className="nav-item"><Link to="/admin/clientes" className='Link'>Inicio</Link></li>
-            <li className="nav-item"><Link to="/admin/tickets" className='Link'>Tickets</Link></li>
+            <li className="nav-item"><Link to="/user" className='Link'>Inicio</Link></li>
+            <li className="nav-item"><Link to="/user/tickets" className='Link'>Tickets</Link></li>
             <li className="nav-item"><Link to="/admin/paqueteria" className='Link'>Cotizaciones</Link></li>
             <li className="nav-item"><Link to="/admin/importaciones" className='Link'>Tracking</Link></li>
             <li className="nav-item"><Link to="/admin/exportaciones" className='Link'>Mis Pedidos</Link></li>
