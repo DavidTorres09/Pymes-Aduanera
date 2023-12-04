@@ -10,6 +10,8 @@ import Imports from './pages/admin/Imports';
 import IndexUser from './pages/user/IndexUser';
 import TickestUser from './pages/user/TicketsUser';
 import Prices from './pages/user/Prices';
+import Tracking from './pages/user/Tracking';
+import ProfileUser from './pages/user/ProfileUser';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/user" element={<IndexUser />} />
         <Route path="/user/tickets" element={<TickestUser />} />
         <Route path="/user/cotizaciones" element={<Prices />} />
+        <Route path="/user/tracking" element={<Tracking />} />
+        <Route path="/user/perfil" element={<ProfileUser />} />
       </Routes>
     </Router>
   );

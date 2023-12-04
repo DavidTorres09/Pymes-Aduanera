@@ -1,0 +1,131 @@
+/* Estilos para el overlay */
+.tracking-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilos para el modal */
+  .tracking-report-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 80%;
+    z-index: 1; /* Asegura que el modal esté en la parte superior */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 80%;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: black;
+  }
+  
+  .report-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .report-label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .report-input,
+  .report-textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .report-submit-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .report-submit-button:hover {
+    background-color: #0d8bf2;
+  }
+  
+  /* Estilos generales del módulo de seguimiento */
+  .tracking-module {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .tracking-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .tracking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .tracking-table th,
+  .tracking-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .tracking-actions {
+    text-align: center;
+  }
+  
+  .tracking-download-link {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+  }
+  
+  .tracking-download-link:hover {
+    text-decoration: underline;
+  }
+  
+  .tracking-report-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tracking-report-button:hover {
+    background-color: #0d8bf2;
+  }
+  

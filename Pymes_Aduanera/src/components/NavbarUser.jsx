@@ -12,9 +12,8 @@ const NavbarUser = () => {
             <li className="nav-item"><Link to="/user" className='Link'>Inicio</Link></li>
             <li className="nav-item"><Link to="/user/tickets" className='Link'>Tickets</Link></li>
             <li className="nav-item"><Link to="/user/cotizaciones" className='Link'>Cotizaciones</Link></li>
-            <li className="nav-item"><Link to="/admin/importaciones" className='Link'>Tracking</Link></li>
-            <li className="nav-item"><Link to="/admin/exportaciones" className='Link'>Mis Pedidos</Link></li>
-            <li className="nav-item"><Link to="/admin/perfil" className='Link'>Perfil</Link></li>
+            <li className="nav-item"><Link to="/user/tracking" className='Link'>Tracking</Link></li>
+            <li className="nav-item"><Link to="/user/perfil" className='Link'>Perfil</Link></li>
             <li className="nav-item"><Link to="/" className='Link'>Salir</Link></li>
           </ul>
         </nav>
