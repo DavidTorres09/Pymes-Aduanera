@@ -5,7 +5,7 @@ import NavbarAdmin from '../../components/NavbarAdmin';
 function Exports () {
 
     return (
-        <div className='containerIndexAdmin'>
+        <div style={{ marginBottom: '10%' }}>
             <NavbarAdmin></NavbarAdmin>
             <ExportsManager></ExportsManager>
             <Footer></Footer>

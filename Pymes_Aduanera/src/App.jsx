@@ -7,6 +7,7 @@ import Profile from './pages/Profile';
 import Parcel from './pages/admin/Parcel';
 import Exports from './pages/admin/Exports';
 import Imports from './pages/admin/Imports';
+import IndexUser from './pages/user/IndexUser';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/admin/importaciones" element={<Imports />} />
         <Route path="/admin/exportaciones" element={<Exports />} />
         <Route path="/admin/perfil" element={<Profile />} />
+        <Route path="/user" element={<IndexUser />} />
       </Routes>
     </Router>
   );
