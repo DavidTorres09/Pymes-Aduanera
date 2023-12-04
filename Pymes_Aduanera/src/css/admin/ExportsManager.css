@@ -1,120 +1,20 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .exportaciones-manager {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .em-title {
-    color: #333;
-  }
-  
-  .btn-agregar {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Estilos para el formulario modal */
-  .em-modal-overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    
-  }
-  
-  .em-modal-content {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: -7%;
-  }
-  
-  .em-close {
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    float: right;
-  }
-  
-  .em-formulario-exportacion {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
-  .formLabel {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  .em-btn-guardar {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .em-listado-exportaciones {
-    margin-top: 20px;
-    overflow-x: auto; 
+.exportaciones-manager {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  th {
-    background-color: rgb(1, 104, 136);
-    color: white;
-  }
-  
-  a.em-button-link {
-    color: #3498db;
-    text-decoration: none;
-    cursor: pointer;
-  }
+
+.em-title {
+  color: #333;
+}
 
 .btn-agregar,
 .em-btn-guardar,
 .em-button-link,
 .em-button,
 .em-button:hover {
-  padding: 10px;
+  padding: 10px 15px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -130,8 +30,8 @@ body {
 .em-button:hover {
   background-color: #2196f3;
   transition: background-color 0.3s ease;
-  width: 100%; 
-  box-sizing: border-box;
+  width: auto;
+  box-sizing: content-box;
 }
 
 .em-button:hover {
@@ -139,7 +39,7 @@ body {
 }
 
 .em-button-link {
-  color: white; 
+  color: white;
   background-color: #4caf50;
   transition: background-color 0.3s ease;
 }
@@ -148,16 +48,88 @@ body {
   background-color: #45a049;
 }
 
+.em-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.em-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: -7%;
+}
+
+.em-close {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  float: right;
+}
+
+.em-formulario-importacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.em-listado-exportaciones {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: rgb(1, 104, 136);
+  color: white;
+}
+
+a.em-button-link {
+  color: #3498db;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 td .em-button-link {
-    color: white; 
-    background-color: #4caf50;
-    padding: 8px 12px; 
-    border-radius: 5px;
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .em-listado-exportaciones td .em-button-link:hover {
-    background-color: #45a049;
-  }
+  color: white;
+  background-color: #4caf50;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.em-listado-exportaciones td .em-button-link:hover {
+  background-color: #45a049;
+}

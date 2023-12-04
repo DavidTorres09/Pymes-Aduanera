@@ -1,113 +1,20 @@
 .importaciones-manager {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .im-title {
-    color: #333;
-  }
-  
-  .btn-agregar {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Estilos para el formulario modal */
-  .im-modal-overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    
-  }
-  
-  .im-modal-content {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: -7%;
-  }
-  
-  .im-close {
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    float: right;
-  }
-  
-  .im-formulario-importacion {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
-  .formLabel {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  .im-btn-guardar {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .im-listado-importaciones {
-    margin-top: 20px;
-    overflow-x: auto; 
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  th {
-    background-color: rgb(1, 104, 136);
-    color: white;
-  }
-  
-  a.im-button-link {
-    color: #3498db;
-    text-decoration: none;
-    cursor: pointer;
-  }
+
+.im-title {
+  color: #333;
+}
 
 .btn-agregar,
 .im-btn-guardar,
 .im-button-link,
 .im-button,
 .im-button:hover {
-  padding: 10px;
+  padding: 10px 15px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -123,8 +30,8 @@
 .im-button:hover {
   background-color: #2196f3;
   transition: background-color 0.3s ease;
-  width: 100%; 
-  box-sizing: border-box;
+  width: auto;
+  box-sizing: content-box;
 }
 
 .im-button:hover {
@@ -132,7 +39,7 @@
 }
 
 .im-button-link {
-  color: white; 
+  color: white;
   background-color: #4caf50;
   transition: background-color 0.3s ease;
 }
@@ -141,16 +48,88 @@
   background-color: #45a049;
 }
 
+.im-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.im-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: -7%;
+}
+
+.im-close {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  float: right;
+}
+
+.im-formulario-importacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.im-listado-importaciones {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: rgb(1, 104, 136);
+  color: white;
+}
+
+a.im-button-link {
+  color: #3498db;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 td .im-button-link {
-    color: white; 
-    background-color: #4caf50;
-    padding: 8px 12px; 
-    border-radius: 5px;
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .im-listado-exportaciones td .im-button-link:hover {
-    background-color: #45a049;
-  }
+  color: white;
+  background-color: #4caf50;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.im-listado-exportaciones td .im-button-link:hover {
+  background-color: #45a049;
+}
