@@ -37,12 +37,14 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    
   }
   
   .em-modal-content {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: -7%;
   }
   
   .em-close {
@@ -52,7 +54,6 @@ body {
     float: right;
   }
   
-  /* Estilos para el formulario de exportación */
   .em-formulario-exportacion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -107,8 +108,7 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
-  
-  /* Estilos para los botones */
+
 .btn-agregar,
 .em-btn-guardar,
 .em-button-link,
@@ -149,9 +149,9 @@ body {
 }
 
 td .em-button-link {
-    color: white; /* Cambio de color del texto */
+    color: white; 
     background-color: #4caf50;
-    padding: 8px 12px; /* Ajusta el relleno según tus preferencias */
+    padding: 8px 12px; 
     border-radius: 5px;
     display: inline-block;
     text-decoration: none;

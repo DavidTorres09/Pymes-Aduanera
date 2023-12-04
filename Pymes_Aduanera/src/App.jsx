@@ -6,6 +6,7 @@ import Clients from './pages/admin/Clients';
 import Profile from './pages/Profile';
 import Parcel from './pages/admin/Parcel';
 import Exports from './pages/admin/Exports';
+import Imports from './pages/admin/Imports';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/admin/clientes" element={<Clients />} />
         <Route path="/admin/tickets" element={<Tickets />} />
         <Route path="/admin/paqueteria" element={<Parcel />} />
+        <Route path="/admin/importaciones" element={<Imports />} />
         <Route path="/admin/exportaciones" element={<Exports />} />
         <Route path="/admin/perfil" element={<Profile />} />
       </Routes>

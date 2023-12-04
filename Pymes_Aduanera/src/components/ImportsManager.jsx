@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import "../css/admin/ExportsManager.css";
+import "../css/admin/ImportsManager.css";
 import File from "../Files/Parsersmeaning.pdf"
 
 
-const ExportsManager = () => {
+const ImportsManager = () => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
-  const [exportaciones, setExportaciones] = useState([
+  const [importaciones, setImportaciones] = useState([
     {
       NumeroSeguimiento: '123456',
       Nombre: 'Juan',
@@ -15,7 +15,7 @@ const ExportsManager = () => {
       PaisOrigen: 'España',
       PaisDestino: 'Estados Unidos',
       NombreNaviera: 'Naviera Express',
-      TipoTramite: 'Exportación',
+      TipoTramite: 'Importacion',
       AlmacenDestino: 'Almacén A',
       EstadoTramite: 'En Proceso',
       EstadoRevision: 'Pendiente',
@@ -32,7 +32,7 @@ const ExportsManager = () => {
       PaisOrigen: 'México',
       PaisDestino: 'Canadá',
       NombreNaviera: 'Naviera Rápida',
-      TipoTramite: 'Exportación',
+      TipoTramite: 'Importación',
       AlmacenDestino: 'Almacén B',
       EstadoTramite: 'Completado',
       EstadoRevision: 'Aprobado',
@@ -41,7 +41,12 @@ const ExportsManager = () => {
       FechaCreacion: '2023-05-20',
     },
   ]);
-  const [exportacionSeleccionada, setExportacionSeleccionada] = useState();
+  const [importacionSeleccionada, setImportacionSeleccionada] = useState({
+    NumeroSeguimiento: '',
+    Nombre: '',
+    // ... (otros campos)
+    Archivo: null, // Cambiado a null ya que es un archivo y no una cadena
+  });
   
   const [editIndex, setEditIndex] = useState(null);
 
@@ -50,44 +55,44 @@ const ExportsManager = () => {
 
     if (type === 'file') {
       const file = e.target.files[0];
-      setExportacionSeleccionada((prevExportacion) => ({
-        ...prevExportacion,
+      setImportacionSeleccionada((prevImportacion) => ({
+        ...prevImportacion,
         [name]: file,
       }));
     } else {
-      setExportacionSeleccionada((prevExportacion) => ({
-        ...prevExportacion,
+      setImportacionSeleccionada((prevImportacion) => ({
+        ...prevImportacion,
         [name]: value,
       }));
     }
   };
-
-  const agregarExportacion = () => {
-    const nuevasExportaciones = [...exportaciones];
+  
+  const agregarImportacion = () => {
+    const nuevasImportaciones = [...importaciones];
   
     if (editIndex !== null) {
-      nuevasExportaciones[editIndex] = exportacionSeleccionada;
+      nuevasImportaciones[editIndex] = importacionSeleccionada;
     } else {
-      nuevasExportaciones.push(exportacionSeleccionada);
+      nuevasImportaciones.push(importacionSeleccionada);
     }
-    setExportaciones(nuevasExportaciones);
+    setImportaciones(nuevasImportaciones);
     resetForm();
   };
   
 
-  const editarExportacion = (index) => {
-    setExportacionSeleccionada({ ...exportaciones[index] });
+  const editarImportacion = (index) => {
+    setImportacionSeleccionada({ ...importaciones[index] });
     setEditIndex(index);
     setMostrarFormulario(true);
   };
 
-  const eliminarExportacion = (index) => {
-    const nuevasExportaciones = exportaciones.filter((_, i) => i !== index);
-    setExportaciones(nuevasExportaciones);
+  const eliminarImportacion = (index) => {
+    const nuevasImportaciones = importaciones.filter((_, i) => i !== index);
+    setImportaciones(nuevasImportaciones);
   };
 
   const resetForm = () => {
-    setExportacionSeleccionada({
+    setImportacionSeleccionada({
       NumeroSeguimiento: '',
       Nombre: '',
       PrimerApellido: '',
@@ -109,27 +114,27 @@ const ExportsManager = () => {
   };
 
   const isAnyFieldEmpty = () => {
-    return Object.values(exportacionSeleccionada).some((value) => value === '');
+    return Object.values(importacionSeleccionada).some((value) => value === '');
   };
 
   return (
-    <div className="exportaciones-manager">
-      <h1 className='em-title'>Agregar Nueva Exportación</h1>
-      <button className="em-button" onClick={() => setMostrarFormulario(true)}>
-        Agregar Exportación
+    <div className="importaciones-manager">
+      <h1 className='im-title'>Agregar Nueva Importación</h1>
+      <button className="im-button" onClick={() => setMostrarFormulario(true)}>
+        Agregar Importación
       </button>
 
       {mostrarFormulario && (
-        <div className="em-modal-overlay">
-          <div className="em-modal-content">
-            <span className="em-close" onClick={() => resetForm()}>&times;</span>
-            <form className="em-formulario-exportacion">
+        <div className="im-modal-overlay">
+          <div className="im-modal-content">
+            <span className="im-close" onClick={() => resetForm()}>&times;</span>
+            <form className="im-formulario-importacion">
               <label className="formLabel">
                 Número de Seguimiento
                 <input
                   type="text"
                   name="NumeroSeguimiento"
-                  value={exportacionSeleccionada.NumeroSeguimiento}
+                  value={importacionSeleccionada.NumeroSeguimiento}
                   onChange={handleInputChange}
                 />
               </label>
@@ -138,7 +143,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="Nombre"
-                  value={exportacionSeleccionada.Nombre}
+                  value={importacionSeleccionada.Nombre}
                   onChange={handleInputChange}
                 />
               </label>
@@ -147,7 +152,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="PrimerApellido"
-                  value={exportacionSeleccionada.PrimerApellido}
+                  value={importacionSeleccionada.PrimerApellido}
                   onChange={handleInputChange}
                 />
               </label>
@@ -156,7 +161,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="SegundoApellido"
-                  value={exportacionSeleccionada.SegundoApellido}
+                  value={importacionSeleccionada.SegundoApellido}
                   onChange={handleInputChange}
                 />
               </label>
@@ -165,7 +170,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="Identificacion"
-                  value={exportacionSeleccionada.Identificacion}
+                  value={importacionSeleccionada.Identificacion}
                   onChange={handleInputChange}
                 />
               </label>
@@ -174,7 +179,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="PaisOrigen"
-                  value={exportacionSeleccionada.PaisOrigen}
+                  value={importacionSeleccionada.PaisOrigen}
                   onChange={handleInputChange}
                 />
               </label><label className="formLabel">
@@ -182,7 +187,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="PaisDestino"
-                  value={exportacionSeleccionada.PaisDestino}
+                  value={importacionSeleccionada.PaisDestino}
                   onChange={handleInputChange}
                 />
               </label>
@@ -191,7 +196,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="NombreNaviera"
-                  value={exportacionSeleccionada.NombreNaviera}
+                  value={importacionSeleccionada.NombreNaviera}
                   onChange={handleInputChange}
                 />
               </label>
@@ -200,7 +205,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="TipoTramite"
-                  value={exportacionSeleccionada.TipoTramite}
+                  value={importacionSeleccionada.TipoTramite}
                   onChange={handleInputChange}
                 />
               </label>
@@ -209,7 +214,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="AlmacenDestino"
-                  value={exportacionSeleccionada.AlmacenDestino}
+                  value={importacionSeleccionada.AlmacenDestino}
                   onChange={handleInputChange}
                 />
               </label>
@@ -218,7 +223,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="EstadoTramite"
-                  value={exportacionSeleccionada.EstadoTramite}
+                  value={importacionSeleccionada.EstadoTramite}
                   onChange={handleInputChange}
                 />
               </label>
@@ -227,7 +232,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="EstadoRevision"
-                  value={exportacionSeleccionada.EstadoRevision}
+                  value={importacionSeleccionada.EstadoRevision}
                   onChange={handleInputChange}
                 />
               </label>
@@ -236,7 +241,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="PagoDekra"
-                  value={exportacionSeleccionada.PagoDekra}
+                  value={importacionSeleccionada.PagoDekra}
                   onChange={handleInputChange}
                 />
               </label>
@@ -245,7 +250,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="Colaborador"
-                  value={exportacionSeleccionada.Colaborador}
+                  value={importacionSeleccionada.Colaborador}
                   onChange={handleInputChange}
                 />
               </label>
@@ -254,7 +259,7 @@ const ExportsManager = () => {
                 <input
                   type="text"
                   name="FechaCreacion"
-                  value={exportacionSeleccionada.FechaCreacion}
+                  value={importacionSeleccionada.FechaCreacion}
                   onChange={handleInputChange}
                 />
               </label>
@@ -269,20 +274,20 @@ const ExportsManager = () => {
                 </label>
 
               <button
-                className="em-btn-guardar"
+                className="im-btn-guardar"
                 type="button"
-                onClick={agregarExportacion}
+                onClick={agregarImportacion}
                 disabled={isAnyFieldEmpty()}
               >
-                {editIndex !== null ? 'Guardar Edición' : 'Guardar Exportación'}
+                {editIndex !== null ? 'Guardar Edición' : 'Guardar Importación'}
               </button>
             </form>
           </div>
         </div>
       )}
 
-      <div className="em-listado-exportaciones">
-        <h2>Listado de Exportaciones</h2>
+      <div className="im-listado-importaciones">
+        <h2>Listado de Importaciones</h2>
         <table>
           <thead>
             <tr>
@@ -306,33 +311,33 @@ const ExportsManager = () => {
             </tr>
           </thead>
           <tbody>
-            {exportaciones.map((exportacion, index) => (
+            {importaciones.map((importacion, index) => (
               <tr key={index}>
-                <td>{exportacion.NumeroSeguimiento}</td>
-                <td>{exportacion.Nombre}</td>
-                <td>{exportacion.PrimerApellido}</td>
-                <td>{exportacion.SegundoApellido}</td>
-                <td>{exportacion.Identificacion}</td>
-                <td>{exportacion.PaisOrigen}</td>
-                <td>{exportacion.PaisDestino}</td>
-                <td>{exportacion.NombreNaviera}</td>
-                <td>{exportacion.TipoTramite}</td>
-                <td>{exportacion.AlmacenDestino}</td>
-                <td>{exportacion.EstadoTramite}</td>
-                <td>{exportacion.EstadoRevision}</td>
-                <td>{exportacion.PagoDekra}</td>
-                <td>{exportacion.Colaborador}</td>
-                <td>{exportacion.FechaCreacion}</td>
+                <td>{importacion.NumeroSeguimiento}</td>
+                <td>{importacion.Nombre}</td>
+                <td>{importacion.PrimerApellido}</td>
+                <td>{importacion.SegundoApellido}</td>
+                <td>{importacion.Identificacion}</td>
+                <td>{importacion.PaisOrigen}</td>
+                <td>{importacion.PaisDestino}</td>
+                <td>{importacion.NombreNaviera}</td>
+                <td>{importacion.TipoTramite}</td>
+                <td>{importacion.AlmacenDestino}</td>
+                <td>{importacion.EstadoTramite}</td>
+                <td>{importacion.EstadoRevision}</td>
+                <td>{importacion.PagoDekra}</td>
+                <td>{importacion.Colaborador}</td>
+                <td>{importacion.FechaCreacion}</td>
                 <td>
-                <a download="" href={File} className="em-button-link">
+                <a download="" href={File} className="im-button-link">
                   Download
                 </a>
               </td>
                 <td>
-                  <button onClick={() => editarExportacion(index)} className="em-button">
+                  <button onClick={() => editarImportacion(index)} className="im-button">
                     Editar
                   </button>
-                  <button onClick={() => eliminarExportacion(index)} className="em-button">
+                  <button onClick={() => eliminarImportacion(index)} className="im-button">
                     Eliminar
                   </button>
                 </td>
@@ -345,4 +350,4 @@ const ExportsManager = () => {
   );
 };
 
-export default ExportsManager;
+export default ImportsManager;
