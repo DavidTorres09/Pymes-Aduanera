@@ -9,6 +9,7 @@ import Exports from './pages/admin/Exports';
 import Imports from './pages/admin/Imports';
 import IndexUser from './pages/user/IndexUser';
 import TickestUser from './pages/user/TicketsUser';
+import Prices from './pages/user/Prices';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/admin/perfil" element={<Profile />} />
         <Route path="/user" element={<IndexUser />} />
         <Route path="/user/tickets" element={<TickestUser />} />
+        <Route path="/user/cotizaciones" element={<Prices />} />
       </Routes>
     </Router>
   );
